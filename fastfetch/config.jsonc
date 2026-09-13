@@ -1,0 +1,124 @@
+// ~/.config/fastfetch/config.jsonc
+// Custom logo + Nerd Font icons + Tokyo Night colors
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/logo.txt",
+    // Gradient: blue -> cyan -> magenta -> white (maps to $1..$4 in logo.txt)
+	"width": 31,
+    "color": {
+      "1": "34",   // blue
+      "2": "38;5;51",   // cyan
+      "3": "38;5;177",  // magenta/purple
+      "4": "37"    // white
+    },
+    "padding": {
+      "top": 2,
+      "right": 4,
+      "left": 2
+    }
+  },
+
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "blue",
+      "title": "magenta"
+    },
+    "key": {
+    	"width": 14,
+    	"type": "both",	
+    },
+    "constants": [
+      "\u001b[90m"
+    ]
+  },
+
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "separator",
+      "string": "─"
+    },
+    {
+      "type": "os",
+      "key": "  OS",
+      "keyColor": "blue"
+    },
+    {
+      "type": "kernel",
+      "key": "  Kernel",
+      "keyColor": "blue"
+    },
+    {
+      "type": "uptime",
+      "key": "  Uptime",
+      "keyColor": "blue"
+    },
+    {
+      "type": "packages",
+      "key": "  Packages",
+      "keyColor": "blue"
+    },
+    {
+      "type": "shell",
+      "key": "  Shell",
+      "keyColor": "blue"
+    },
+    "break",
+    {
+      "type": "wm",
+      "key": "  WM",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "de",
+      "key": "  DE",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "terminal",
+      "key": "  Terminal",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "display",
+      "key": "  Display",
+      "keyColor": "cyan"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "  CPU",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "gpu",
+      "format": "{1} {2}",
+      "key": "  GPU",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "memory",
+      "key": "  Memory",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "disk",
+      "key": "  Disk",
+      "keyColor": "magenta"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 2,
+      "symbol": "circle"
+    }
+  ]
+}

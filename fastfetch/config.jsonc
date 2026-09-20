@@ -62,6 +62,11 @@
       "keyColor": "blue"
     },
     {
+        "type": "command",
+        "key": "  Age",
+        "text": "t=$(stat -c %W /); if [ \"$t\" -gt 0 ]; then echo \"$(( ($(date +%s) - t) / 86400 )) days\"; else echo unavailable; fi"
+    },
+    {
       "type": "packages",
       "key": "  Packages",
       "keyColor": "blue"

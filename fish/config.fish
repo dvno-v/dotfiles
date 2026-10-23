@@ -44,4 +44,8 @@ function update-all
     end
 end
 
+# Full folder names in the prompt (~/Documents/data/projects, not ~/D/d/projects).
+# The Pure prompt (see README) already does this; this covers fish's default prompt.
+set -g fish_prompt_pwd_dir_length 0
+
 set fish_greeting

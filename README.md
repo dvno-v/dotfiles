@@ -71,9 +71,20 @@ chsh -s "$(command -v fish)"
 
 Log out and back in for the shell change to take effect. CachyOS already uses fish, but its stock `config.fish` loads CachyOS's own fish setup; this one replaces it.
 
+### Prompt
+
+The prompt is [Pure](https://github.com/pure-fish/pure): the full path on one line and `❯` on the next, the same as CachyOS's default. CachyOS already has it installed (`fish-pure-prompt`). On Fedora and plain Arch, install it with [fisher](https://github.com/jorgebucaran/fisher):
+
+```sh
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher pure-fish/pure'
+```
+
+Open a new terminal to see it. Without Pure, fish falls back to its default prompt, which this config still sets to show full folder names.
+
 What the config adds:
 
 - Runs fastfetch when an interactive shell opens, with no greeting.
+- Full folder names in the prompt (`~/Documents/data/projects`, not `~/D/d/projects`).
 - `ll` (eza with icons), `la`, `l`, `..`, `...`
 - `cp`, `mv` and `rm` ask before overwriting or deleting.
 - Git shortcuts: `g`, `gs`, `ga`, `gc "message"`, `gp`, `gl`

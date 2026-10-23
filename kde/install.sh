@@ -7,13 +7,15 @@ repo_dir=$(dirname -- "$kde_dir")
 config_root="${XDG_CONFIG_HOME:-$HOME/.config}"
 data_root="${XDG_DATA_HOME:-$HOME/.local/share}"
 
-for program in qdbus6 kreadconfig6 kwriteconfig6 plasma-apply-colorscheme plasma-apply-desktoptheme busctl rofi; do
+for program in kreadconfig6 kwriteconfig6 plasma-apply-colorscheme plasma-apply-desktoptheme busctl rofi; do
     command -v "$program" >/dev/null || { printf 'Missing dependency: %s\n' "$program" >&2; exit 1; }
 done
+# Arch ships qdbus6, Fedora ships qdbus-qt6.
+qdbus=$(command -v qdbus6 || command -v qdbus-qt6) || { printf '%s\n' 'Missing dependency: qdbus6 (Arch: qt6-tools, Fedora: qt6-qttools)' >&2; exit 1; }
 if [[ -z $(fc-list 'JetBrainsMono Nerd Font' family) ]]; then
     printf '%s\n' 'Warning: JetBrainsMono Nerd Font is not installed; the clock and rofi will fall back to another font.' >&2
 fi
-if ! qdbus6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'print("ok")' >/dev/null 2>&1; then
+if ! "$qdbus" org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'print("ok")' >/dev/null 2>&1; then
     printf '%s\n' 'Run this from a terminal inside your logged-in KDE Plasma session.' >&2
     exit 1
 fi
@@ -45,10 +47,10 @@ kwriteconfig6 --file kdeglobals --group General --key ColorScheme ''
 plasma-apply-colorscheme GruvboxFlat
 plasma-apply-desktoptheme gruvbox-flat
 kwriteconfig6 --file kwinrc --group Plugins --key blurEnabled true
-qdbus6 org.kde.KWin /KWin org.kde.KWin.reconfigure
+"$qdbus" org.kde.KWin /KWin org.kde.KWin.reconfigure
 
 # Panels.
-qdbus6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "$(<"$kde_dir/layout.js")"
+"$qdbus" org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "$(<"$kde_dir/layout.js")"
 
 # Shortcuts: KRunner keeps Alt+F2 and Search, rofi takes Alt+Space.
 # Key codes are Qt key + modifier ints; flags 6 = SetPresent|NoAutoloading (otherwise it stays inactive).

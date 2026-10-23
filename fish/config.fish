@@ -5,7 +5,7 @@ end
 
 # Flatpak additions
 if status is-login; or status is-interactive
-    set -gx XDG_DATA_DIRS (string join : $XDG_DATA_DIRS /var/lib/flatpak/exports/share /home/drv0/.local/share/flatpak/exports/share)
+    set -gx XDG_DATA_DIRS (string join : $XDG_DATA_DIRS /var/lib/flatpak/exports/share $HOME/.local/share/flatpak/exports/share)
 end
 
 
@@ -20,7 +20,7 @@ alias ... "cd ../.."
 # Convenience & Safety
 alias cp "cp -i"
 alias mv "mv -i"
-alias rm "interactive --trash" # Or just rm -i if you prefer prompt warnings
+alias rm "rm -i"
 alias df "df -h"
 alias free "free -h"
 
@@ -32,7 +32,16 @@ alias gc "git commit -m"
 alias gp "git push"
 alias gl "git log --oneline --graph --decorate"
 
-# Update shortcut
-alias update-all="echo '== Packman update =='; and sudo pacman -Syu; echo '== Flatpak update =='; and flatpak update -y"
+# Update shortcut (pacman on Arch, dnf on Fedora)
+function update-all
+    if command -q pacman
+        echo '== Pacman update =='; and sudo pacman -Syu
+    else if command -q dnf
+        echo '== DNF update =='; and sudo dnf upgrade --refresh
+    end
+    if command -q flatpak
+        echo '== Flatpak update =='; and flatpak update -y
+    end
+end
 
 set fish_greeting

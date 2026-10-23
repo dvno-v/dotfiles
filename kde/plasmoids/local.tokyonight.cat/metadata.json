@@ -1,0 +1,14 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Id": "local.tokyonight.cat",
+        "Name": "Night Cat",
+        "Description": "A tiny Tokyo Night pixel cat. Click to pause or resume its run.",
+        "Icon": "face-smile",
+        "Category": "Fun and Games",
+        "Version": "1.0.0",
+        "License": "MIT",
+        "Authors": [{"Name": "drv0"}]
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

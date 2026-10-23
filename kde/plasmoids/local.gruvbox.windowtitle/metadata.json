@@ -1,0 +1,14 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Id": "local.gruvbox.windowtitle",
+        "Name": "Active App Name",
+        "Description": "Shows the name of the focused application.",
+        "Icon": "window",
+        "Category": "Windows and Tasks",
+        "Version": "1.0.0",
+        "License": "MIT",
+        "Authors": [{"Name": "drv0"}]
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="120" viewBox="0 0 300 120">
+<g id="topleft">
+  <rect x="0" y="0" width="2" height="2" fill="#282828" fill-opacity="0.96"/>
+</g>
+<g id="topright">
+  <rect x="18" y="0" width="2" height="2" fill="#282828" fill-opacity="0.96"/>
+</g>
+<g id="bottomleft">
+  <rect x="0" y="18" width="2" height="2" fill="#282828" fill-opacity="0.96"/>
+</g>
+<g id="bottomright">
+  <rect x="18" y="18" width="2" height="2" fill="#282828" fill-opacity="0.96"/>
+</g>
+<g id="top"><rect x="2" y="0" width="16" height="2" fill="#282828" fill-opacity="0.96"/></g>
+<g id="bottom"><rect x="2" y="18" width="16" height="2" fill="#282828" fill-opacity="0.96"/></g>
+<g id="left"><rect x="0" y="2" width="2" height="16" fill="#282828" fill-opacity="0.96"/></g>
+<g id="right"><rect x="18" y="2" width="2" height="16" fill="#282828" fill-opacity="0.96"/></g>
+<rect id="center" x="2" y="2" width="16" height="16" fill="#282828" fill-opacity="0.96"/>
+<rect id="mask-topleft" x="30" y="0" width="2" height="2" fill="#fff"/>
+<rect id="mask-topright" x="48" y="0" width="2" height="2" fill="#fff"/>
+<rect id="mask-bottomleft" x="30" y="18" width="2" height="2" fill="#fff"/>
+<rect id="mask-bottomright" x="48" y="18" width="2" height="2" fill="#fff"/>
+<rect id="mask-top" x="32" y="0" width="16" height="2" fill="#fff"/>
+<rect id="mask-bottom" x="32" y="18" width="16" height="2" fill="#fff"/>
+<rect id="mask-left" x="30" y="2" width="2" height="16" fill="#fff"/>
+<rect id="mask-right" x="48" y="2" width="2" height="16" fill="#fff"/>
+<rect id="mask-center" x="32" y="2" width="16" height="16" fill="#fff"/>
+<g id="floating-topleft">
+  <path d="M70 0 A10 10 0 0 0 60 10 L70 10 Z" fill="#282828" fill-opacity="0.92"/>
+  <path d="M70 0 A10 10 0 0 0 60 10 L61 10 A9 9 0 0 1 70 1 Z" fill="#45403d" fill-opacity="0.9"/>
+</g>
+<g id="floating-topright">
+  <path d="M86 0 A10 10 0 0 1 96 10 L86 10 Z" fill="#282828" fill-opacity="0.92"/>
+  <path d="M86 0 A10 10 0 0 1 96 10 L95 10 A9 9 0 0 0 86 1 Z" fill="#45403d" fill-opacity="0.9"/>
+</g>
+<g id="floating-bottomleft">
+  <path d="M70 36 A10 10 0 0 1 60 26 L70 26 Z" fill="#282828" fill-opacity="0.92"/>
+  <path d="M70 36 A10 10 0 0 1 60 26 L61 26 A9 9 0 0 0 70 35 Z" fill="#45403d" fill-opacity="0.9"/>
+</g>
+<g id="floating-bottomright">
+  <path d="M86 36 A10 10 0 0 0 96 26 L86 26 Z" fill="#282828" fill-opacity="0.92"/>
+  <path d="M86 36 A10 10 0 0 0 96 26 L95 26 A9 9 0 0 1 86 35 Z" fill="#45403d" fill-opacity="0.9"/>
+</g>
+<g id="floating-top"><rect x="70" y="0" width="16" height="10" fill="#282828" fill-opacity="0.92"/><rect x="70" y="0" width="16" height="1" fill="#45403d" fill-opacity="0.9"/></g>
+<g id="floating-bottom"><rect x="70" y="26" width="16" height="10" fill="#282828" fill-opacity="0.92"/><rect x="70" y="35" width="16" height="1" fill="#45403d" fill-opacity="0.9"/></g>
+<g id="floating-left"><rect x="60" y="10" width="10" height="16" fill="#282828" fill-opacity="0.92"/><rect x="60" y="10" width="1" height="16" fill="#45403d" fill-opacity="0.9"/></g>
+<g id="floating-right"><rect x="86" y="10" width="10" height="16" fill="#282828" fill-opacity="0.92"/><rect x="95" y="10" width="1" height="16" fill="#45403d" fill-opacity="0.9"/></g>
+<rect id="floating-center" x="70" y="10" width="16" height="16" fill="#282828" fill-opacity="0.92"/>
+<path id="mask-floating-topleft" d="M110 10 A10 10 0 0 1 120 0 V10 Z" fill="#fff"/>
+<path id="mask-floating-topright" d="M136 0 A10 10 0 0 1 146 10 H136 Z" fill="#fff"/>
+<path id="mask-floating-bottomleft" d="M110 26 H120 V36 A10 10 0 0 1 110 26 Z" fill="#fff"/>
+<path id="mask-floating-bottomright" d="M136 26 H146 A10 10 0 0 1 136 36 Z" fill="#fff"/>
+<rect id="mask-floating-top" x="120" y="0" width="16" height="10" fill="#fff"/>
+<rect id="mask-floating-bottom" x="120" y="26" width="16" height="10" fill="#fff"/>
+<rect id="mask-floating-left" x="110" y="10" width="10" height="16" fill="#fff"/>
+<rect id="mask-floating-right" x="136" y="10" width="10" height="16" fill="#fff"/>
+<rect id="mask-floating-center" x="120" y="10" width="16" height="16" fill="#fff"/>
+<rect id="hint-top-margin" x="0" y="70" width="1" height="2" fill="#f00"/>
+<rect id="hint-bottom-margin" x="4" y="70" width="1" height="2" fill="#f00"/>
+<rect id="hint-left-margin" x="8" y="70" width="8" height="1" fill="#f00"/>
+<rect id="hint-right-margin" x="19" y="70" width="8" height="1" fill="#f00"/>
+<rect id="floating-hint-top-margin" x="30" y="70" width="1" height="8" fill="#f00"/>
+<rect id="floating-hint-bottom-margin" x="34" y="70" width="1" height="8" fill="#f00"/>
+<rect id="floating-hint-left-margin" x="38" y="70" width="8" height="1" fill="#f00"/>
+<rect id="floating-hint-right-margin" x="49" y="70" width="8" height="1" fill="#f00"/>
+<rect id="hint-stretch-borders" x="60" y="70" width="1" height="1" fill="#f00"/>
+</svg>

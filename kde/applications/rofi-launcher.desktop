@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Rofi Launcher
+Comment=App launcher (Alt+Space)
+Exec=rofi -show drun
+Icon=rofi
+NoDisplay=true
+StartupNotify=false
+X-KDE-GlobalAccel-CommandShortcut=true

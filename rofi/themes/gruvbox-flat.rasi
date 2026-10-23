@@ -1,0 +1,88 @@
+/* Gruvbox Material, flat. Matches the Plasma "Gruvbox Flat" theme. */
+* {
+    bg:     #282828;
+    bg1:    #32302f;
+    bg2:    #45403d;
+    fg:     #d4be98;
+    dim:    #a89984;
+    pink:   #d3869b;
+    aqua:   #7daea3;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrainsMono Nerd Font Medium 11";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 400px;
+    padding: 22px;
+    border: 0;
+    border-radius: 0;
+    background-color: @bg;
+}
+
+mainbox {
+    spacing: 26px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding: 12px 16px;
+    spacing: 14px;
+    border: 1px;
+    border-radius: 3px;
+    border-color: @bg1;
+    children: [ textbox-search, entry ];
+}
+
+textbox-search {
+    expand: false;
+    str: "";
+    text-color: @aqua;
+    vertical-align: 0.5;
+}
+
+entry {
+    placeholder: "";
+    cursor: text;
+    vertical-align: 0.5;
+}
+
+listview {
+    lines: 7;
+    fixed-height: true;
+    spacing: 8px;
+    scrollbar: false;
+    cycle: true;
+}
+
+element {
+    padding: 12px 14px;
+    border-radius: 2px;
+}
+
+element normal.normal,
+element alternate.normal,
+element normal.active,
+element alternate.active {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: @pink;
+    text-color: @bg;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+message, textbox {
+    text-color: @dim;
+}

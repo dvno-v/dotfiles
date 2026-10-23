@@ -1,0 +1,11 @@
+{
+    "KPlugin": {
+        "Id": "gruvbox-flat",
+        "Name": "Gruvbox Flat",
+        "Description": "Flat Gruvbox Material bar with a floating dock",
+        "Version": "1.0.0",
+        "License": "MIT",
+        "Authors": [{"Name": "drv0"}]
+    },
+    "X-Plasma-API": "5.0"
+}
